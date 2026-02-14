@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Knowledge Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Quiz Master</h1>
+            <p>Test your knowledge across various topics!</p>
+        </header>
+
+        <main class="quiz-container" id="quiz-container">
+            <div id="start-screen" class="screen active">
+                <h2>Welcome to the Challenge!</h2>
+                <div class="registration-form">
+                    <label for="reg-no">Registration Number:</label>
+                    <input type="text" id="reg-no" placeholder="Enter your Reg No" required>
+                    <p class="date-display">Date: <span id="test-date"></span></p>
+                </div>
+                <p>You will face 10 random questions.</p>
+                <button id="start-btn" class="btn primary-btn">Start Quiz</button>
+            </div>
+
+            <div id="question-screen" class="screen hidden">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <div class="header-info">
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <span id="question-number">Question 1 of 5</span>
+                        <span id="score-display">Score: 0</span>
+                    </div>
+                    <div id="timer" class="timer-container">Time: 45s</div>
+                </div>
+                <h3 id="question-text">Question goes here...</h3>
+                <div id="options-container" class="options-grid">
+                    <!-- Options injected by JS -->
+                </div>
+                <div id="feedback" class="feedback hidden"></div>
+                <button id="next-btn" class="btn primary-btn hidden">Next Question</button>
+            </div>
+
+            <div id="result-screen" class="screen hidden">
+                <h2>Quiz Completed!</h2>
+                <p>Your Score:</p>
+                <div class="final-score" id="final-score">0 / 0</div>
+                <p id="result-message">Great job!</p>
+                <button id="download-btn" class="btn primary-btn" style="margin-bottom: 1rem;">Download Result &
+                    Close</button>
+                <p style="font-size: 0.8rem; color: #6b7280;">Please download your result and close this tab.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Quiz Master App</p>
+        </footer>
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
